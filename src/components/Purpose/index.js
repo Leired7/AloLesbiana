@@ -1,7 +1,6 @@
 import React from 'react';
 
 import {
-  Box,
   Button,
   Container,
   Content,
@@ -10,7 +9,7 @@ import {
   Section,
 } from 'react-bulma-components';
 
-import { FLEXCENTER, PRIDE_COLORS } from 'services/settings';
+import { PRIDE_COLORS } from 'services/settings';
 
 const Purpose = () => {
   return (
@@ -33,7 +32,7 @@ const Purpose = () => {
               <h2>Objetivo</h2>
               <p>
                 Con esta página web quiero agrupar algunos artículos que existen
-                en la Wikipedia sobre &nbsp;<strong>lesbianismo</strong> y{' '}
+                en la Wikipedia sobre <strong>lesbianismo</strong> y{' '}
                 <strong>lesbianas</strong> visibles públicamente.
               </p>
               <div style={{ height: '40px' }}></div>

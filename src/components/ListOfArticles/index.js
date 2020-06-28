@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import WikiCard from '../WikiCard/index';
 
-import Spinner from '@bit/nexxtway.react-rainbow.spinner';
-import { Columns, Box } from 'react-bulma-components';
+import { Columns, Box, Progress } from 'react-bulma-components';
 
 import getExtractLesbianHistory from '../../services/getExtractLesbianHistory';
 
@@ -42,7 +41,7 @@ const ListOfArticles = () => {
               },
             )
           ) : (
-            <Spinner />
+            <Progress />
           )}
         </Columns>
       </Box>

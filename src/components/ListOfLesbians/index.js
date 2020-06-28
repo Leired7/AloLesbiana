@@ -2,12 +2,16 @@ import React, { useEffect, useState } from 'react';
 
 import WikiCard from '../WikiCard/index';
 
-import Spinner from '@bit/nexxtway.react-rainbow.spinner';
-
 import getWikiMembers from '../../services/getWikiMembers';
 import getAllLesbianExtractImage from '../../services/getAllLesbianExtractImage';
 
-import { Heading, Columns, Box, Notification } from 'react-bulma-components';
+import {
+  Heading,
+  Columns,
+  Box,
+  Notification,
+  Progress,
+} from 'react-bulma-components';
 
 import { Link } from 'react-router-dom';
 import { FLEXCENTER } from 'services/settings';
@@ -36,7 +40,7 @@ const ListOfLesbians = (props) => {
       </Link>
       <Heading style={FLEXCENTER}>{props.match.params.category}</Heading>
       <Heading subtitle size={6} style={FLEXCENTER}>
-        {`Número de artículos en Wikipedia ${allLesbian.length}`}
+        {`${allLesbian.length} artículos en Wikipedia`}
       </Heading>
       <Box>
         <Columns breakpoint="tablet">
@@ -64,7 +68,7 @@ const ListOfLesbians = (props) => {
               },
             )
           ) : (
-            <Spinner />
+            <Progress />
           )}
         </Columns>
       </Box>

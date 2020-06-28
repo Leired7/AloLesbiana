@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from 'react';
 
-import Spinner from '@bit/nexxtway.react-rainbow.spinner';
-
 import getWikiCategories from 'services/getWikiCategories';
 import { FLEXCENTER } from '../../services/settings';
 
 import { Link } from 'react-router-dom';
 
-import { Button, Box, Columns, Notification } from 'react-bulma-components';
+import {
+  Button,
+  Box,
+  Columns,
+  Notification,
+  Progress,
+} from 'react-bulma-components';
 
 const ListofCategories = () => {
   const [lesbianCategory, setLesbianCategory] = useState([]);
@@ -37,7 +41,7 @@ const ListofCategories = () => {
             );
           })
         ) : (
-          <Spinner />
+          <Progress />
         )}
       </Columns>
     </>

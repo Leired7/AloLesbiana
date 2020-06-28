@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar } from 'react-bulma-components/';
 import Logo from '../../images/logo_horizontal.png';
+import Octocat from '../../images/Octocat.jpg';
 
 const Header = () => {
   const [isActive, setisActive] = React.useState(false);
@@ -29,6 +30,16 @@ const Header = () => {
               <Navbar.Item href="/lesbianas">Lesbianas</Navbar.Item>
               {/* <Navbar.Item href="#">Películas de temática</Navbar.Item> */}
             </Navbar.Container>
+            <Navbar.Item href="https://github.com/Leired7/alolesbiana">
+              Repositorio del proyecto
+              <img
+                src={Octocat}
+                alt="Logo del repositorio de GitHub dónde está alojado el código"
+                width={'33px'}
+                height={'33px'}
+                rounded={true}
+              />
+            </Navbar.Item>
           </Navbar.Container>
         </Navbar.Menu>
       </Navbar>
