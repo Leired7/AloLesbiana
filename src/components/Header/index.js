@@ -1,7 +1,10 @@
 import React from 'react';
 import { Navbar } from 'react-bulma-components/';
+
 import Logo from '../../images/logo_horizontal.png';
 import Octocat from '../../images/Octocat.jpg';
+
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isActive, setisActive] = React.useState(false);
@@ -25,9 +28,16 @@ const Header = () => {
         <Navbar.Menu>
           <Navbar.Container>
             <Navbar.Container>
-              <Navbar.Item href="./">Objetivo</Navbar.Item>
-              <Navbar.Item href="./historia">Historia</Navbar.Item>
-              <Navbar.Item href="./lesbianas">Lesbianas</Navbar.Item>
+              <Link to="/">
+                <Navbar.Item>Objetivo</Navbar.Item>
+              </Link>
+              <Link to="/historia">
+                <Navbar.Item>Historia</Navbar.Item>
+              </Link>
+              <Link to="./lesbianas">
+                <Navbar.Item>Lesbianas</Navbar.Item>
+              </Link>
+
               {/* <Navbar.Item href="#">Películas de temática</Navbar.Item> */}
             </Navbar.Container>
             <Navbar.Item href="https://github.com/Leired7/alolesbiana">
