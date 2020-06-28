@@ -8,7 +8,9 @@ import {
 const requestHistory = HISTORY_ARTICLES_WIKIPEDIA.map((name) => {
   return fetch(
     `${URL}?action=query&prop=extracts|pageimages|info&exsentences=3&pithumbsize=200&exintro&explaintext&inprop=url&redirects=1&${CORS_HEAD}${FORMAT_JSON}&titles=${name}`,
-  ).then((res) => res.json());
+  )
+    .then((res) => res.json())
+    .catch((error) => console.log(`${error}`));
 });
 //POSIBLE NUEVA BÚSQUEDA PARA QUITAR UN FETCH: &prop=extracts|pageimages|info&pithumbsize=400&exintro&explaintext&inprop=url&redirects=
 

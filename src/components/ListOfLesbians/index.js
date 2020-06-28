@@ -21,12 +21,16 @@ const ListOfLesbians = (props) => {
 
   useEffect(
     function () {
-      getWikiMembers(props.match.params.category).then((data) => {
-        const nameOfWomans = data;
-        getAllLesbianExtractImage(nameOfWomans).then((data) => {
-          setallLesbian(data);
-        });
-      });
+      getWikiMembers(props.match.params.category)
+        .then((data) => {
+          const nameOfWomans = data;
+          getAllLesbianExtractImage(nameOfWomans)
+            .then((data) => {
+              setallLesbian(data);
+            })
+            .catch((error) => console.log(`${error}`));
+        })
+        .catch((error) => console.log(`${error}`));
     },
     [props.match.params.category],
   );

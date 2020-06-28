@@ -6,7 +6,6 @@ import {
 } from '../services/settings';
 
 const wikiLesbianURL = `${URL}?action=query&list=categorymembers&cmlimit=500${FORMAT_JSON}${CORS_HEAD}&cmtitle=Category:${WIKI_LESBIAN}`;
-console.log(wikiLesbianURL);
 
 export default function getWikiCategories() {
   return fetch(wikiLesbianURL)
