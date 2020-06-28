@@ -25,9 +25,9 @@ const Header = () => {
         <Navbar.Menu>
           <Navbar.Container>
             <Navbar.Container>
-              <Navbar.Item href="/">Objetivo</Navbar.Item>
-              <Navbar.Item href="/historia">Historia</Navbar.Item>
-              <Navbar.Item href="/lesbianas">Lesbianas</Navbar.Item>
+              <Navbar.Item href="./">Objetivo</Navbar.Item>
+              <Navbar.Item href="./historia">Historia</Navbar.Item>
+              <Navbar.Item href="./lesbianas">Lesbianas</Navbar.Item>
               {/* <Navbar.Item href="#">Películas de temática</Navbar.Item> */}
             </Navbar.Container>
             <Navbar.Item href="https://github.com/Leired7/alolesbiana">
