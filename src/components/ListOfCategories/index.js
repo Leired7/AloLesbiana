@@ -29,10 +29,10 @@ const ListofCategories = () => {
       </Notification>
       <Columns breakpoint="tablet">
         {lesbianCategory.length > 0 ? (
-          lesbianCategory.map((category) => {
+          lesbianCategory.map((category, index) => {
             return (
-              <Columns.Column size={6}>
-                <Box key={category} style={FLEXCENTER}>
+              <Columns.Column key={index} size={6}>
+                <Box style={FLEXCENTER}>
                   <Link to={`/lesbianas/${category}`}>
                     <Button color="dark">{category}</Button>
                   </Link>
@@ -41,7 +41,7 @@ const ListofCategories = () => {
             );
           })
         ) : (
-          <Progress />
+          <Progress max={100} color="primary" size="small" />
         )}
       </Columns>
     </>

@@ -18,7 +18,7 @@ const Header = () => {
             />
           </Navbar.Item>
           <Navbar.Burger
-            active={isActive}
+            active={`${isActive}`}
             onClick={() => setisActive(!isActive)}
           />
         </Navbar.Brand>
@@ -37,7 +37,7 @@ const Header = () => {
                 alt="Logo del repositorio de GitHub dónde está alojado el código"
                 width={'33px'}
                 height={'33px'}
-                rounded={true}
+                rounded={`true`}
               />
             </Navbar.Item>
           </Navbar.Container>

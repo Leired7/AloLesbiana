@@ -19,14 +19,17 @@ import { FLEXCENTER } from 'services/settings';
 const ListOfLesbians = (props) => {
   const [allLesbian, setallLesbian] = useState([]);
 
-  useEffect(function () {
-    getWikiMembers(props.match.params.category).then((data) => {
-      const nameOfWomans = data;
-      getAllLesbianExtractImage(nameOfWomans).then((data) => {
-        setallLesbian(data);
+  useEffect(
+    function () {
+      getWikiMembers(props.match.params.category).then((data) => {
+        const nameOfWomans = data;
+        getAllLesbianExtractImage(nameOfWomans).then((data) => {
+          setallLesbian(data);
+        });
       });
-    });
-  }, []);
+    },
+    [props.match.params.category],
+  );
 
   return (
     <>
@@ -46,29 +49,23 @@ const ListOfLesbians = (props) => {
         <Columns breakpoint="tablet">
           {allLesbian.length > 0 ? (
             allLesbian.map(
-              (
-                { canonicalurl, extract, image, pageid, pageimage, title },
-                id,
-              ) => {
+              ({ canonicalurl, extract, image, pageid, pageimage, title }) => {
                 return (
-                  <>
-                    <Columns.Column size={6}>
-                      <WikiCard
-                        key={id}
-                        canonicalurl={canonicalurl}
-                        extract={extract}
-                        image={image}
-                        id={pageid}
-                        pageimage={pageimage}
-                        title={title}
-                      />
-                    </Columns.Column>
-                  </>
+                  <Columns.Column key={pageid} size={6}>
+                    <WikiCard
+                      canonicalurl={canonicalurl}
+                      extract={extract}
+                      image={image}
+                      id={pageid}
+                      pageimage={pageimage}
+                      title={title}
+                    />
+                  </Columns.Column>
                 );
               },
             )
           ) : (
-            <Progress />
+            <Progress max={100} color="primary" size="small" />
           )}
         </Columns>
       </Box>

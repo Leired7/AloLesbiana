@@ -41,7 +41,7 @@ const ListOfArticles = () => {
               },
             )
           ) : (
-            <Progress />
+            <Progress max={100} color="primary" size="small" />
           )}
         </Columns>
       </Box>
