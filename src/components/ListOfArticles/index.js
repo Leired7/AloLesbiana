@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
-import WikiCard from '../WikiCard/index';
+import WikiCard from 'components/WikiCard/index';
 
 import { Columns, Box, Progress } from 'react-bulma-components';
 
-import getExtractLesbianHistory from '../../services/getExtractLesbianHistory';
+import getExtractLesbianHistory from 'services/getExtractLesbianHistory';
 
 const ListOfArticles = () => {
   const [lesbianHistory, setLesbianHistory] = useState([]);

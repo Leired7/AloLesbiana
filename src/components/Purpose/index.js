@@ -39,8 +39,9 @@ const Purpose = () => {
 
               <p>
                 También quiero que sirva para agradecer a les wikipedistas que
-                editan la Wikipedia por el gran trabajo que realizan para crear
-                y compartir conocimiento.
+                editan la Wikipedia (en especial al grupo de trabajo Wikiesfera)
+                por el gran trabajo que realizan para crear y compartir
+                conocimiento.
               </p>
               <p>
                 <strong>
@@ -56,17 +57,17 @@ const Purpose = () => {
               <p>
                 En el <strong>Portal LGTB</strong> están visibles y agrupados
                 muchos más artículos de interés.
-                <Button
-                  color="dark"
-                  renderAs="a"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  content="enlace"
-                  href="https://es.wikipedia.org/wiki/Portal:LGBT"
-                >
-                  Portal LGTBI (W)
-                </Button>
               </p>
+              <Button
+                color="dark"
+                renderAs="a"
+                target="_blank"
+                rel="noopener noreferrer"
+                content="enlace"
+                href="https://es.wikipedia.org/wiki/Portal:LGBT"
+              >
+                Portal LGTBI (W)
+              </Button>
             </Content>
           </Notification>
         </Container>

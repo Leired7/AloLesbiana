@@ -1,6 +1,6 @@
 import React from 'react';
-import LogoNodos from '../../images/logo_nodos.png';
-import { FLEXCENTER } from '../../services/settings';
+import LogoNodos from 'images/logo_nodos.png';
+import { FLEXCENTER } from 'services/settings';
 
 import {
   Media,

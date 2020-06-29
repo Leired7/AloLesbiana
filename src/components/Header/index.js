@@ -1,8 +1,8 @@
 import React from 'react';
 import { Navbar } from 'react-bulma-components/';
 
-import Logo from '../../images/logo_horizontal.png';
-import Octocat from '../../images/Octocat.jpg';
+import Logo from 'images/logo_horizontal.png';
+import Octocat from 'images/Octocat.jpg';
 
 import { Link } from 'react-router-dom';
 
@@ -29,13 +29,14 @@ const Header = () => {
           <Navbar.Container>
             <Navbar.Container>
               <Link to="/">
-                <Navbar.Item>Objetivo</Navbar.Item>
+                <Navbar.Item renderAs="span">Objetivo</Navbar.Item>
               </Link>
               <Link to="/historia">
-                <Navbar.Item>Historia</Navbar.Item>
+                <Navbar.Item renderAs="span">Historia</Navbar.Item>
               </Link>
-              <Link to="./lesbianas">
-                <Navbar.Item>Lesbianas</Navbar.Item>
+              <Link to="/lesbianas">
+                {' '}
+                <Navbar.Item renderAs="span">Lesbianas</Navbar.Item>
               </Link>
 
               {/* <Navbar.Item href="#">Películas de temática</Navbar.Item> */}

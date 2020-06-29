@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import getWikiCategories from 'services/getWikiCategories';
-import { FLEXCENTER } from '../../services/settings';
+import { FLEXCENTER } from 'services/settings';
 
 import { Link } from 'react-router-dom';
 
