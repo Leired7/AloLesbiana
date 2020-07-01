@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar } from 'react-bulma-components/';
-
+import { Link } from 'react-router-dom';
 import Logo from 'images/logo_horizontal.png';
 import Octocat from 'images/Octocat.jpg';
 
@@ -27,13 +27,13 @@ const Header = () => {
         </Navbar.Brand>
         <Navbar.Menu>
           <Navbar.Container>
-            <Navbar.Link arrowless={'false'} to="/">
+            <Navbar.Link arrowless={'false'} renderAs={Link} to="/">
               Objetivo
             </Navbar.Link>
-            <Navbar.Link arrowless={'false'} href="./historia">
+            <Navbar.Link arrowless={'false'} renderAs={Link} to="./historia">
               Historia
             </Navbar.Link>
-            <Navbar.Link arrowless={'false'} renderAs="a" href="./lesbianas">
+            <Navbar.Link arrowless={'false'} renderAs={Link} to="./lesbianas">
               Lesbianas
             </Navbar.Link>
 
