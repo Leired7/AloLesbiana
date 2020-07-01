@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navbar } from 'react-bulma-components/';
+import { Link } from 'react-router-dom';
 
 import Logo from 'images/logo_horizontal.png';
 import Octocat from 'images/Octocat.jpg';
@@ -10,7 +11,7 @@ const Header = () => {
     <header>
       <Navbar color="dark" active={isActive}>
         <Navbar.Brand>
-          <Navbar.Item renderAs="a" href="/">
+          <Navbar.Link arrowless={'false'} renderAs="a" href="/">
             <img
               src={Logo}
               alt="Logo Aló lesbiana!"
@@ -18,7 +19,7 @@ const Header = () => {
               height="100px"
               rounded={true}
             />
-          </Navbar.Item>
+          </Navbar.Link>
           <Navbar.Burger
             active={`${isActive}`}
             onClick={() => setisActive(!isActive)}
@@ -27,15 +28,15 @@ const Header = () => {
         </Navbar.Brand>
         <Navbar.Menu>
           <Navbar.Container>
-            <Navbar.Item renderAs="a" href="/">
+            <Navbar.Link arrowless={'false'} to="/">
               Objetivo
-            </Navbar.Item>
-            <Navbar.Item renderAs="a" href="/historia">
+            </Navbar.Link>
+            <Navbar.Link arrowless={'false'} href="./historia">
               Historia
-            </Navbar.Item>
-            <Navbar.Item renderAs="a" href="/lesbianas">
+            </Navbar.Link>
+            <Navbar.Link arrowless={'false'} renderAs="a" href="./lesbianas">
               Lesbianas
-            </Navbar.Item>
+            </Navbar.Link>
 
             {/* <Navbar.Item href="#">Películas de temática</Navbar.Item> */}
 
