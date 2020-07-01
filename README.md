@@ -30,3 +30,9 @@ Utilizado para crear las rutas internas de la aplicación.
 ## Información
 
 La información es proporcionada por la API-REST de [Wikimedia](https://www.mediawiki.org/wiki/Wikimedia_REST_API)
+
+## Mejoras
+
+# Añadir rutas absolutas
+
+https://create-react-app.dev/docs/importing-a-component/#absolute-imports
