@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import getWikiCategories from 'services/getWikiCategories';
 import getAllLesbianExtractImage from 'services/getAllLesbianExtractImage';
 
+import WikiCard from 'components/WikiCard/index';
+
 import { FLEXCENTER } from 'services/settings';
 
 import { Link } from 'react-router-dom';
@@ -28,6 +30,7 @@ const ListofCategories = () => {
       .then((data) => setNotCategoryArticles(data));
   }, []);
 
+  console.log(notCategoryArticles);
   return (
     <>
       <Notification color="warning">
@@ -50,6 +53,28 @@ const ListofCategories = () => {
           })
         ) : (
           <Progress max={100} color="primary" size="small" />
+        )}
+      </Columns>
+      <Columns breakpoint="tablet">
+        {notCategoryArticles.length > 0 ? (
+          notCategoryArticles.map(
+            ({ canonicalurl, extract, image, pageid, pageimage, title }) => {
+              return (
+                <Columns.Column key={pageid} size={6}>
+                  <WikiCard
+                    canonicalurl={canonicalurl}
+                    extract={extract}
+                    image={image}
+                    id={pageid}
+                    pageimage={pageimage}
+                    title={title}
+                  />
+                </Columns.Column>
+              );
+            },
+          )
+        ) : (
+          <Progress />
         )}
       </Columns>
     </>
