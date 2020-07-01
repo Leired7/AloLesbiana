@@ -2,10 +2,10 @@ import React from 'react';
 
 import { Route } from 'react-router-dom';
 
-import ListOfCategories from 'components/ListOfCategories';
-import ListOfArticles from 'components/ListOfArticles';
-import ListOfLesbians from 'components/ListOfLesbians';
-import Purpose from 'components/Purpose';
+import ListOfCategories from 'components/ListOfCategories/index';
+import ListOfArticles from 'components/ListOfArticles/index';
+import ListOfLesbians from 'components/ListOfLesbians/index';
+import Purpose from 'components/Purpose/index';
 
 const Main = () => {
   return (

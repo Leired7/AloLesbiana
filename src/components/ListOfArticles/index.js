@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import WikiCard from 'components/WikiCard';
+import WikiCard from 'components/WikiCard/index';
 
 import { Columns, Box, Progress } from 'react-bulma-components';
 

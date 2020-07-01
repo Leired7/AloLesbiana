@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import WikiCard from 'components/WikiCard';
+import WikiCard from 'components/WikiCard/index';
 
 import getWikiMembers from 'services/getWikiMembers';
 import getAllLesbianExtractImage from 'services/getAllLesbianExtractImage';
