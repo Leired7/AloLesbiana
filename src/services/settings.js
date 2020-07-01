@@ -2,6 +2,8 @@ export const LANGUAGE = 'es';
 
 export const URL = 'https://es.wikipedia.org/w/api.php';
 
+export const ACTION_QUERY = '?action=query';
+
 export const CORS_HEAD = '&origin=*';
 
 export const WIKI_LESBIAN = 'Lesbianas';
@@ -42,4 +44,10 @@ export const PRIDE_COLORS = {
     #00ab84 87.5% /* 7*12.5% */,
     #00a3e0 0
   )`,
+  position: 'relative',
+  top: 0,
+  height: 'calc(100vh - 3.25rem)',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
 };

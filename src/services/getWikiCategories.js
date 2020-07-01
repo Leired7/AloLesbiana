@@ -1,12 +1,12 @@
 import {
+  ACTION_QUERY,
   URL,
   CORS_HEAD,
   WIKI_LESBIAN,
   FORMAT_JSON,
-} from '../services/settings';
+} from './settings';
 
-const wikiLesbianURL = `${URL}?action=query&list=categorymembers&cmlimit=500${FORMAT_JSON}${CORS_HEAD}&cmtitle=Category:${WIKI_LESBIAN}`;
-console.log(wikiLesbianURL);
+const wikiLesbianURL = `${URL}${ACTION_QUERY}&list=categorymembers&cmlimit=500${FORMAT_JSON}${CORS_HEAD}&cmtitle=Category:${WIKI_LESBIAN}`;
 
 export default function getWikiCategories() {
   return fetch(wikiLesbianURL)
@@ -15,15 +15,25 @@ export default function getWikiCategories() {
       const queryCategories = data.query.categorymembers;
       console.log(queryCategories);
 
-      const searchCategories = queryCategories.filter(function (category) {
-        return category.ns === 14;
-      });
+      const onlyWikiCategory = queryCategories.reduce(function (acc, article) {
+        const arrayFromReduce = [...acc];
+        article.ns === 14 && arrayFromReduce.push(`${article.title}`.slice(10));
+        return arrayFromReduce;
+      }, []);
+      console.log('onlyWikiCategory', onlyWikiCategory);
 
-      const onlyWikiCategory = searchCategories.map((category) => {
-        return category.title.slice(10);
-      });
+      const articlesWithoutCategory = queryCategories.reduce(function (
+        acc,
+        article,
+      ) {
+        const arrayFromReduce = [...acc];
+        article.ns === 0 && arrayFromReduce.push(`${article.title}`);
+        return arrayFromReduce;
+      },
+      []);
+      console.log('reduce', articlesWithoutCategory);
 
-      return onlyWikiCategory;
+      return { onlyWikiCategory, articlesWithoutCategory };
     })
     .catch((error) => console.log(`Ooops... ${error}`));
 }

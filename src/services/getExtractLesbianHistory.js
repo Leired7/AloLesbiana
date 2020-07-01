@@ -1,13 +1,14 @@
 import {
+  ACTION_QUERY,
   URL,
   CORS_HEAD,
   FORMAT_JSON,
   HISTORY_ARTICLES_WIKIPEDIA,
-} from '../services/settings';
+} from 'services/settings';
 
 const requestHistory = HISTORY_ARTICLES_WIKIPEDIA.map((name) => {
   return fetch(
-    `${URL}?action=query&prop=extracts|pageimages|info&exsentences=3&pithumbsize=200&exintro&explaintext&inprop=url&redirects=1&${CORS_HEAD}${FORMAT_JSON}&titles=${name}`,
+    `${URL}${ACTION_QUERY}&prop=extracts|pageimages|info&exsentences=3&pithumbsize=200&exintro&explaintext&inprop=url&redirects=1&${CORS_HEAD}${FORMAT_JSON}&titles=${name}`,
   )
     .then((res) => res.json())
     .catch((error) => console.log(`${error}`));

@@ -1,6 +1,6 @@
-import { URL, CORS_HEAD, FORMAT_JSON } from './settings';
+import { ACTION_QUERY, URL, CORS_HEAD, FORMAT_JSON } from './settings';
 
-const wikiURLCategorymembers = `${URL}?action=query&list=categorymembers&cmlimit=500${FORMAT_JSON}&cmtitle=Category:`;
+const wikiURLCategorymembers = `${URL}${ACTION_QUERY}&list=categorymembers&cmlimit=500${FORMAT_JSON}&cmtitle=Category:`;
 
 export default function getWikimembers(category) {
   return fetch(`${wikiURLCategorymembers}${category}${CORS_HEAD}`)
