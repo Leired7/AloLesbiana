@@ -50,4 +50,5 @@ export const PRIDE_COLORS = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+  height: '100%',
 };
