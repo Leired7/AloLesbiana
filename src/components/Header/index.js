@@ -1,6 +1,5 @@
 import React from 'react';
 import { Navbar } from 'react-bulma-components/';
-import { Link } from 'react-router-dom';
 
 import Logo from 'images/logo_horizontal.png';
 import Octocat from 'images/Octocat.jpg';
