@@ -35,11 +35,11 @@ const Purpose = () => {
                 en la Wikipedia sobre <strong>lesbianismo</strong> y{' '}
                 <strong>lesbianas</strong> visibles públicamente.
               </p>
-              <div style={{ height: '40px' }}></div>
 
               <p>
                 También quiero que sirva para agradecer a les wikipedistas que
-                editan la Wikipedia (en especial al grupo de trabajo Wikiesfera)
+                editan la Wikipedia (en especial al grupo de trabajo
+                <a href="http://wikiesfera.org/">Wikiesfera)</a>
                 por el gran trabajo que realizan para crear y compartir
                 conocimiento.
               </p>

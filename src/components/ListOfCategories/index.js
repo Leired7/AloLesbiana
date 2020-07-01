@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
 import getWikiCategories from 'services/getWikiCategories';
+import getAllLesbianExtractImage from 'services/getAllLesbianExtractImage';
+
 import { FLEXCENTER } from 'services/settings';
 
 import { Link } from 'react-router-dom';
@@ -15,9 +17,15 @@ import {
 
 const ListofCategories = () => {
   const [lesbianCategory, setLesbianCategory] = useState([]);
+  const [notCategoryArticles, setNotCategoryArticles] = useState([]);
 
   useEffect(function () {
-    getWikiCategories().then((data) => setLesbianCategory(data));
+    getWikiCategories()
+      .then((data) => {
+        setLesbianCategory(data.onlyWikiCategory);
+        return getAllLesbianExtractImage(data.articlesWithoutCategory);
+      })
+      .then((data) => setNotCategoryArticles(data));
   }, []);
 
   return (

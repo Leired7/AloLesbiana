@@ -4,13 +4,11 @@ import { Navbar } from 'react-bulma-components/';
 import Logo from 'images/logo_horizontal.png';
 import Octocat from 'images/Octocat.jpg';
 
-import { Link } from 'react-router-dom';
-
 const Header = () => {
   const [isActive, setisActive] = React.useState(false);
   return (
     <header>
-      <Navbar color="dark" active={isActive} fixed={'bottom'}>
+      <Navbar color="dark" active={isActive}>
         <Navbar.Brand>
           <Navbar.Item renderAs="a" href="/">
             <img
@@ -18,37 +16,39 @@ const Header = () => {
               alt="Logo Aló lesbiana!"
               width="100px"
               height="100px"
+              rounded={true}
             />
           </Navbar.Item>
           <Navbar.Burger
             active={`${isActive}`}
             onClick={() => setisActive(!isActive)}
+            color="grey"
           />
         </Navbar.Brand>
         <Navbar.Menu>
           <Navbar.Container>
-            <Navbar.Container>
-              <Link to="/">
-                <Navbar.Item renderAs="span">Objetivo</Navbar.Item>
-              </Link>
-              <Link to="/historia">
-                <Navbar.Item renderAs="span">Historia</Navbar.Item>
-              </Link>
-              <Link to="/lesbianas">
-                {' '}
-                <Navbar.Item renderAs="span">Lesbianas</Navbar.Item>
-              </Link>
+            <Navbar.Item renderAs="a" href="/">
+              Objetivo
+            </Navbar.Item>
+            <Navbar.Item renderAs="a" href="/historia">
+              Historia
+            </Navbar.Item>
+            <Navbar.Item renderAs="a" href="/lesbianas">
+              Lesbianas
+            </Navbar.Item>
 
-              {/* <Navbar.Item href="#">Películas de temática</Navbar.Item> */}
-            </Navbar.Container>
+            {/* <Navbar.Item href="#">Películas de temática</Navbar.Item> */}
+
             <Navbar.Item href="https://github.com/Leired7/alolesbiana">
               Repositorio del proyecto
               <img
+                style={{ margin: '4px' }}
+                renderAs="img"
                 src={Octocat}
                 alt="Logo del repositorio de GitHub dónde está alojado el código"
                 width={'33px'}
                 height={'33px'}
-                rounded={`true`}
+                rounded={true}
               />
             </Navbar.Item>
           </Navbar.Container>

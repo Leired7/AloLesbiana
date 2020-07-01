@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import WikiCard from 'components/WikiCard/index';
+import WikiCard from 'components/WikiCard';
 
 import { Columns, Box, Progress } from 'react-bulma-components';
 
@@ -24,19 +24,16 @@ const ListOfArticles = () => {
                 id,
               ) => {
                 return (
-                  <>
-                    <Columns.Column size={6}>
-                      <WikiCard
-                        key={id}
-                        canonicalurl={canonicalurl}
-                        extract={extract}
-                        image={image}
-                        id={pageid}
-                        pageimage={pageimage}
-                        title={title}
-                      />
-                    </Columns.Column>
-                  </>
+                  <Columns.Column key={id} size={6}>
+                    <WikiCard
+                      canonicalurl={canonicalurl}
+                      extract={extract}
+                      image={image}
+                      id={pageid}
+                      pageimage={pageimage}
+                      title={title}
+                    />
+                  </Columns.Column>
                 );
               },
             )
