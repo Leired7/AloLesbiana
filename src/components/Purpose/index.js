@@ -9,18 +9,17 @@ import {
   Section,
 } from 'react-bulma-components';
 
-import { PRIDE_COLORS } from 'services/settings';
+import './styles.scss';
 
 const Purpose = () => {
   return (
     <>
-      <Section style={PRIDE_COLORS}>
-        <Container fluid>
+      <Section className="purpose-container">
+        <Container fluid style={{ maxWidth: '600px' }}>
           <Notification>
             <Heading size={3} renderAs="p" style={{ color: '#1bacb4' }}>
               Aló lesbiana!
             </Heading>
-
             <Content>
               <Heading size={5} renderAs="p">
                 ESTAMOS POR TODOS LADOS, SIEMPRE LO ESTUVIMOS
@@ -39,8 +38,8 @@ const Purpose = () => {
               <p>
                 También quiero que sirva para agradecer a les wikipedistas que
                 editan la Wikipedia (en especial al grupo de trabajo
-                <a href="http://wikiesfera.org/">Wikiesfera)</a>
-                por el gran trabajo que realizan para crear y compartir
+                <a href="http://wikiesfera.org/">&nbsp;Wikiesfera)</a>
+                &nbsp;por el gran trabajo que realizan para crear y compartir
                 conocimiento.
               </p>
               <p>
@@ -51,7 +50,7 @@ const Purpose = () => {
                   </span>
                 </strong>
                 aquí podréis encontrar una pequeña introducción y el enlace a la
-                información de varios artículos que están alojados en
+                información de varios artículos que están alojados en&nbsp;
                 <strong>Wikipedia.</strong>
               </p>
               <p>
