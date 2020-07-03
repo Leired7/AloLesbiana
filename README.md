@@ -36,3 +36,7 @@ La información es proporcionada por la API-REST de [Wikimedia](https://www.medi
 # Añadir rutas absolutas
 
 https://create-react-app.dev/docs/importing-a-component/#absolute-imports
+
+Use Navbar.Link with react-router-dom
+
+https://github.com/couds/react-bulma-components/issues/55

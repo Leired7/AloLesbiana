@@ -27,19 +27,37 @@ const Header = () => {
         </Navbar.Brand>
         <Navbar.Menu>
           <Navbar.Container>
-            <Navbar.Link arrowless={'false'} renderAs={Link} to="/">
+            <Navbar.Link
+              arrowless={'false'}
+              renderAs={Link}
+              to="/"
+              onClick={() => setisActive(!isActive)}
+            >
               Objetivo
             </Navbar.Link>
-            <Navbar.Link arrowless={'false'} renderAs={Link} to="./historia">
+            <Navbar.Link
+              arrowless={'false'}
+              renderAs={Link}
+              to="./historia"
+              onClick={() => setisActive(!isActive)}
+            >
               Historia
             </Navbar.Link>
-            <Navbar.Link arrowless={'false'} renderAs={Link} to="./lesbianas">
+            <Navbar.Link
+              arrowless={'false'}
+              renderAs={Link}
+              to="./lesbianas"
+              onClick={() => setisActive(!isActive)}
+            >
               Lesbianas
             </Navbar.Link>
 
             {/* <Navbar.Item href="#">Películas de temática</Navbar.Item> */}
 
-            <Navbar.Item href="https://github.com/Leired7/alolesbiana">
+            <Navbar.Item
+              href="https://github.com/Leired7/alolesbiana"
+              onClick={() => setisActive(!isActive)}
+            >
               Repositorio del proyecto
               <img
                 style={{ margin: '4px' }}
